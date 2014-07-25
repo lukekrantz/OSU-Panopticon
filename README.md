@@ -36,7 +36,15 @@ Program Overview:
 
 * http_sniff:
 
-	http_sniff.py is the sniffing application.  It sniffs on the device defined on lines 29-34.  Change these to meet your needs.  It grabs the packets that pass through the packet filter and checks to see if they are in the dictionary of connections.  If they are the dictionary then they are part of an ongoing connection and get parsed through and added to the database.  If they are not in the dictionary we check to see how large it is.  If it is less than 500 (an arbitrary number at this point) then it is added to the dictionary and parsed as usual.  If the dictionary is full then we reject the packet, effectively saving a bunch of cpu time so we dont slow down the system too much.  If the packet is rejected, and it has been over a minute since the last packet was rejected, we clear out the connection database.  This means that if a connection has timed out, a number that is based on the browser that is being used, then it gets erased from the database to save room for new connections. The actual parsing is commented in the code if it is not intuitive.
+	http_sniff.py is the sniffing application. It sniffs by default on Linux eth0. Change these to meet your needs. 
+It grabs the packets that pass through the packet filter and checks to see if they are in the dictionary of connections. 
+If they are the dictionary then they are part of an ongoing connection and get parsed through and added to the database. 
+If they are not in the dictionary we check to see how large it is. If it is less than 500 (an arbitrary number at this point) 
+then it is added to the dictionary and parsed as usual. If the dictionary is full then we reject the packet, effectively saving
+ a bunch of cpu time so we dont slow down the system too much.  If the packet is rejected, and it has been over a minute 
+since the last packet was rejected, we clear out the connection database.  This means that if a connection has timed out, 
+a number that is based on the browser that is being used, then it gets erased from the database to save room for new connections. 
+The actual parsing is commented in the code if it is not intuitive.
 
 
 * p3p:
