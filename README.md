@@ -10,19 +10,23 @@ Non Standard Libraries needed:
 
 
 
-pcapy:	python frontend to libpcap. Can be found at: http://oss.coresecurity.com/projects/pcapy.html  Ubuntu has a apt package at python-pcapy. it has some complicated documentation, but the functions are similiar to the libpcap library so those documents work the same.
+pcapy:
+python frontend to libpcap. Can be found at: http://oss.coresecurity.com/projects/pcapy.html  Ubuntu has a apt package at python-pcapy. it has some complicated documentation, but the functions are similiar to the libpcap library so those documents work the same.
 
 
 
-MySQLdb: the standard (but not included for some reason) python mysql library. http://sourceforge.net/projects/mysql-python/ Ubuntu has an apt package for this as well, python-mysqldb
+MySQLdb:
+the standard (but not included for some reason) python mysql library. http://sourceforge.net/projects/mysql-python/ Ubuntu has an apt package for this as well, python-mysqldb
 
 p3p.py:
-	p3p should be able to be run on most any python version, it was tested on 2.5 with http_sniff.	
-MySQLdb: needed to add and remove things from the database, see above for installation.	
+p3p should be able to be run on most any python version, it was tested on 2.5 with http_sniff.	
+
+MySQLdb: 
+needed to add and remove things from the database, see above for installation.	
 
 Execution:
-	http_sniff needs root privelages on a linux machine, administrator on windows if it gets ported. To run it type:
-	sudo python http_sniff.py or chmod it to have execution privelages and drop the python part. p3p doesn't need to be ran as root as it doesnt use the packet sniffing library.
+==========
+http_sniff needs root privelages on a linux machine, administrator on windows if it gets ported. To run it type: sudo python http_sniff.py or chmod it to have execution privelages and drop the python part. p3p doesn't need to be ran as root as it doesnt use the packet sniffing library.
 
 
 ##Program Overview:
